@@ -35,13 +35,26 @@
 Array.prototype.getRandom = function () {
   return this.splice(Math.floor(Math.random() * this.length), 1)[0];
 };
+function pairs (names) {
+  if (!names) {
+    return []
+    
+} else {
+  let array1 =[]
+  while (names.length) {
+        var name1 = names.getRandom() , 
+            name2 = names.getRandom()
 
-function pairs(names) {
-  // Your code goes here
+            let  newarray = [name1,name2] 
+
+             array1 = (array1.concat([newarray]))
+    }
+
+   return array1  
 }
 
+}
+let names = ['Asis', 'Hamsa', 'Fawas', 'Mishmish', 'basel']
+console.log(pairs(names))
+ 
 module.exports = pairs;
-
-console.log(
-  pairs(["Asis", "Hamsa", "Fawas", "Mishmish", "Hussein", "Lailz", "Mr Potato"])
-);
